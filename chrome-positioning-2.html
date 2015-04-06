@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="width=device-width,initial-scale=1,user-scalable=yes" name="viewport">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: blue;
+  text-align: center;
+  z-index: 2;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background: green;
+  text-align: center;
+  z-index: 2;
+}
+#left-side {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  background: red;
+  padding-top: 25%;
+}
+#right-side {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  background: yellow;
+  padding-top: 25%;
+}
+#break-me {
+  position: absolute;
+  top: 4em;
+  left: 4em;
+}
+#breaker {
+  position: absolute;
+  top: 6em;
+  left: 4em;
+}
+</style>
+</head>
+<body>
+<header>Header</header>
+<main>
+  <div id="left-side">Left</div>
+  <div id="right-side">Right</div>
+  <button id="break-me">Click me to break the page</button>
+  <div id="breaker">My position will break the page!</div>
+</main>
+<footer>Footer</footer>
+
+<script>
+var button = document.getElementById('break-me');
+var breaker = document.getElementById('breaker');
+button.onclick = function () {
+  breaker.style.left = '10000px';
+};
+</script>
+</body>
+</html>
